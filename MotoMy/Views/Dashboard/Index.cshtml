@@ -1,0 +1,115 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+@section PageScript
+{
+    <script src="~/Themes/SmartAdmin/js/plugin/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Themes/SmartAdmin/js/plugin/datatables/dataTables.colVis.min.js"></script>
+    <script src="~/Themes/SmartAdmin/js/plugin/datatables/dataTables.tableTools.min.js"></script>
+    <script src="~/Themes/SmartAdmin/js/plugin/datatables/dataTables.bootstrap.min.js"></script>
+    <script src="~/Themes/SmartAdmin/js/plugin/datatable-responsive/datatables.responsive.min.js"></script>
+
+    <script>
+
+        var responsiveHelper_dt_basic = undefined;
+
+        var breakpointDefinition = {
+            tablet: 1024,
+            phone: 480
+        };
+
+        $(function () {
+            activateMenu('dashboard', 'dashboard');
+            //activateMenu('dashboard','');
+
+            /* Datatable ;*/
+            
+            /* Datatable */
+        });
+
+    </script>
+}
+
+
+
+<div id="ribbon">
+
+    <!-- breadcrumb -->
+    <ol class="breadcrumb">
+        <li>Dashboard</li>
+    </ol>
+    <!-- end breadcrumb -->
+
+</div>
+<!-- END RIBBON -->
+<!-- MAIN CONTENT -->
+<div id="content">
+    <section id="widget-grid">
+
+
+        <div class="row">
+            <article class="col-sm-12 col-md-12 col-lg-8 sortable-grid ui-sortable">
+                <!-- new widget -->
+                <div class="jarviswidget" id="wid-id-0" data-widget-togglebutton="false" data-widget-editbutton="false" data-widget-fullscreenbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
+                    <!-- widget options:
+            usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+            data-widget-colorbutton="false"
+            data-widget-editbutton="false"
+            data-widget-togglebutton="false"
+            data-widget-deletebutton="false"
+            data-widget-fullscreenbutton="false"
+            data-widget-custombutton="false"
+            data-widget-collapsed="true"
+            data-widget-sortable="false"
+
+            -->
+                    <header>
+                        <span class="widget-icon"> <i class="glyphicon glyphicon-record txt-color-blueDark"></i> </span>
+                        <!--<h2>My Dashboard</h2>-->
+                        <ul class="nav nav-tabs pull-right in" id="myTab">
+                            <li class="active">
+                                <a data-toggle="tab" href="#s1"><i class="fa fa-tag"></i> <span class="hidden-mobile hidden-tablet">My Pending Request</span></a>
+                            </li>
+
+                            <li>
+                                <a data-toggle="tab" href="#s2"><i class="fa fa-check"></i> <span class="hidden-mobile hidden-tablet">My Pending Approval</span></a>
+                            </li>
+
+                            <li>
+                                <a data-toggle="tab" href="#s3"><i class="fa fa-sitemap"></i> <span class="hidden-mobile hidden-tablet">DOA in Effect</span></a>
+                            </li>
+                           
+                        </ul>
+                    </header>
+                    <!-- widget div-->
+                    <div class="no-padding">
+
+                        <div class="widget-body">
+                            <!-- content -->
+                           
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="col-sm-12 col-md-12 col-lg-4 sortable-grid ui-sortable">
+                <div class="jarviswidget jarviswidget-color-darken"
+                     data-widget-togglebutton="false" data-widget-editbutton="false" data-widget-fullscreenbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
+                    <header>
+                        <span class="widget-icon"><i class="fa fa-list"></i></span>
+                        <h2>Latest News</h2>
+                    </header>
+                    <div class="jarviswidget-editbox"></div>
+                    <!-- end widget edit box -->
+                    <!-- content -->
+                    <div class="widget-body">
+                     
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+</div>

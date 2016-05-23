@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MOTOMYModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="Advertisement">
+    <Key>
+      <PropertyRef Name="AdvertisementId" />
+    </Key>
+    <Property Name="AdvertisementId" Type="Int32" Nullable="false" />
+    <Property Name="BlobId" Type="Int32" Nullable="false" />
+    <Property Name="AdvertisementCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AdvertisementName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Clicked" Type="Int32" />
+    <Property Name="CreationDate" Type="Int32" />
+    <Property Name="CreationTime" Type="Int16" />
+    <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifyDate" Type="Int32" />
+    <Property Name="ModifyTime" Type="Int16" />
+    <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeleteDate" Type="Int32" />
+    <Property Name="DeleteTime" Type="Int16" />
+    <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordStatus" Type="Int16" />
+  </EntityType>
+  <EntityType Name="Banner">
+    <Key>
+      <PropertyRef Name="BannerId" />
+    </Key>
+    <Property Name="BannerId" Type="Int32" Nullable="false" />
+    <Property Name="BannerCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BannerName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationDate" Type="Int32" />
+    <Property Name="CreationTime" Type="Int16" />
+    <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifyDate" Type="Int32" />
+    <Property Name="ModifyTime" Type="Int16" />
+    <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeleteDate" Type="Int32" />
+    <Property Name="DeleteTime" Type="Int16" />
+    <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordStatus" Type="Int16" />
+  </EntityType>
+  <EntityType Name="Blob">
+    <Key>
+      <PropertyRef Name="BlobId" />
+    </Key>
+    <Property Name="BlobId" Type="Int32" Nullable="false" />
+    <Property Name="SourceKey" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="SourceRefType" Type="Int16" />
+    <Property Name="Filename" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Name="FileExt" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="BlobName" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="BlobType" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="Data" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CreationDate" Type="Int32" />
+    <Property Name="CreationTime" Type="Int16" />
+    <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifyDate" Type="Int32" />
+    <Property Name="ModifyTime" Type="Int16" />
+    <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeleteDate" Type="Int32" />
+    <Property Name="DeleteTime" Type="Int16" />
+    <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordStatus" Type="Int16" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="CategoryCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CategoryName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationDate" Type="Int32" />
+    <Property Name="CreationTime" Type="Int16" />
+    <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifyDate" Type="Int32" />
+    <Property Name="ModifyTime" Type="Int16" />
+    <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeleteDate" Type="Int32" />
+    <Property Name="DeleteTime" Type="Int16" />
+    <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordStatus" Type="Int16" />
+  </EntityType>
+  <EntityType Name="Content">
+    <Key>
+      <PropertyRef Name="ContentId" />
+    </Key>
+    <Property Name="ContentId" Type="Int32" Nullable="false" />
+    <Property Name="ContentCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContentName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Content1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationDate" Type="Int32" />
+    <Property Name="CreationTime" Type="Int16" />
+    <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifyDate" Type="Int32" />
+    <Property Name="ModifyTime" Type="Int16" />
+    <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeleteDate" Type="Int32" />
+    <Property Name="DeleteTime" Type="Int16" />
+    <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordStatus" Type="Int16" />
+  </EntityType>
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="LocationId" />
+    </Key>
+    <Property Name="LocationId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="LocationCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LocationName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LocationAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LocationContact" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LocationCoordinate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationDate" Type="Int32" />
+    <Property Name="CreationTime" Type="Int16" />
+    <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifyDate" Type="Int32" />
+    <Property Name="ModifyTime" Type="Int16" />
+    <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeleteDate" Type="Int32" />
+    <Property Name="DeleteTime" Type="Int16" />
+    <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordStatus" Type="Int16" />
+  </EntityType>
+  <EntityType Name="Newsletter">
+    <Key>
+      <PropertyRef Name="NewsletterId" />
+    </Key>
+    <Property Name="NewsletterId" Type="Int32" Nullable="false" />
+    <Property Name="NewsletterCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NewsletterName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NewsletterContent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationDate" Type="Int32" />
+    <Property Name="CreationTime" Type="Int16" />
+    <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifyDate" Type="Int32" />
+    <Property Name="ModifyTime" Type="Int16" />
+    <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeleteDate" Type="Int32" />
+    <Property Name="DeleteTime" Type="Int16" />
+    <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordStatus" Type="Int16" />
+  </EntityType>
+  <EntityType Name="Product_Header">
+    <Key>
+      <PropertyRef Name="ProductHeaderId" />
+    </Key>
+    <Property Name="ProductHeaderId" Type="Int32" Nullable="false" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="BannerId" Type="Int32" Nullable="false" />
+    <Property Name="StockStatusId" Type="Int32" Nullable="false" />
+    <Property Name="LocationId" Type="Int32" Nullable="false" />
+    <Property Name="ProductTypeId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Sku" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Upc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Class" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Engine" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CompressionRatio" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MaxTorque" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Transmision" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FrontTyre" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OverallLength" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OverallHeight" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SeatHeight" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FuelCapacity" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="HorsePower" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="YearUsed" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PlateNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Qty" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ModFeatured" Type="Boolean" Nullable="false" />
+    <Property Name="CreationDate" Type="Int32" />
+    <Property Name="CreationTime" Type="Int16" />
+    <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifyDate" Type="Int32" />
+    <Property Name="ModifyTime" Type="Int16" />
+    <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeleteDate" Type="Int32" />
+    <Property Name="DeleteTime" Type="Int16" />
+    <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordStatus" Type="Int16" />
+  </EntityType>
+  <EntityType Name="Product_Image">
+    <Key>
+      <PropertyRef Name="ProductHeaderId" />
+      <PropertyRef Name="BlobId" />
+    </Key>
+    <Property Name="ProductHeaderId" Type="Int32" Nullable="false" />
+    <Property Name="BlobId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product_Type">
+    <Key>
+      <PropertyRef Name="ProductTypeId" />
+    </Key>
+    <Property Name="ProductTypeId" Type="Int32" Nullable="false" />
+    <Property Name="ProductTypeCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationDate" Type="Int32" />
+    <Property Name="CreationTime" Type="Int16" />
+    <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifyDate" Type="Int32" />
+    <Property Name="ModifyTime" Type="Int16" />
+    <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeleteDate" Type="Int32" />
+    <Property Name="DeleteTime" Type="Int16" />
+    <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordStatus" Type="Int16" />
+  </EntityType>
+  <EntityType Name="Stock_Status">
+    <Key>
+      <PropertyRef Name="StockStatusId" />
+    </Key>
+    <Property Name="StockStatusId" Type="Int32" Nullable="false" />
+    <Property Name="StockStatusCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="StockStatusName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationDate" Type="Int32" />
+    <Property Name="CreationTime" Type="Int16" />
+    <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifyDate" Type="Int32" />
+    <Property Name="ModifyTime" Type="Int16" />
+    <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeleteDate" Type="Int32" />
+    <Property Name="DeleteTime" Type="Int16" />
+    <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordStatus" Type="Int16" />
+  </EntityType>
+  <EntityType Name="Subscribe">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="TargetUserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="TargetUserId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="UserRoleId" Type="Int32" Nullable="false" />
+    <Property Name="BlobId" Type="Int32" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IcNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ModSubscribe" Type="Boolean" Nullable="false" />
+    <Property Name="CreationDate" Type="Int32" />
+    <Property Name="CreationTime" Type="Int16" />
+    <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifyDate" Type="Int32" />
+    <Property Name="ModifyTime" Type="Int16" />
+    <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeleteDate" Type="Int32" />
+    <Property Name="DeleteTime" Type="Int16" />
+    <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordStatus" Type="Int16" />
+  </EntityType>
+  <EntityType Name="User_Role">
+    <Key>
+      <PropertyRef Name="UserRoleId" />
+    </Key>
+    <Property Name="UserRoleId" Type="Int32" Nullable="false" />
+    <Property Name="UserRoleCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserRoleName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreationDate" Type="Int32" />
+    <Property Name="CreationTime" Type="Int16" />
+    <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifyDate" Type="Int32" />
+    <Property Name="ModifyTime" Type="Int16" />
+    <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeleteDate" Type="Int32" />
+    <Property Name="DeleteTime" Type="Int16" />
+    <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordStatus" Type="Int16" />
+  </EntityType>
+  <EntityContainer Name="MOTOMYEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Advertisements" EntityType="Self.Advertisement" />
+    <EntitySet Name="Banners" EntityType="Self.Banner" />
+    <EntitySet Name="Blobs" EntityType="Self.Blob" />
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="Contents" EntityType="Self.Content" />
+    <EntitySet Name="Locations" EntityType="Self.Location" />
+    <EntitySet Name="Newsletters" EntityType="Self.Newsletter" />
+    <EntitySet Name="Product_Header" EntityType="Self.Product_Header" />
+    <EntitySet Name="Product_Image" EntityType="Self.Product_Image" />
+    <EntitySet Name="Product_Type" EntityType="Self.Product_Type" />
+    <EntitySet Name="Stock_Status" EntityType="Self.Stock_Status" />
+    <EntitySet Name="Subscribes" EntityType="Self.Subscribe" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="User_Role" EntityType="Self.User_Role" />
+  </EntityContainer>
+</Schema>

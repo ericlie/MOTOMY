@@ -1,0 +1,911 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MOTOMYModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="Advertisement">
+          <Key>
+            <PropertyRef Name="AdvertisementId" />
+          </Key>
+          <Property Name="AdvertisementId" Type="int" Nullable="false" />
+          <Property Name="BlobId" Type="int" Nullable="false" />
+          <Property Name="AdvertisementCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="AdvertisementName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Clicked" Type="int" />
+          <Property Name="CreationDate" Type="int" />
+          <Property Name="CreationTime" Type="smallint" />
+          <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifyDate" Type="int" />
+          <Property Name="ModifyTime" Type="smallint" />
+          <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeleteDate" Type="int" />
+          <Property Name="DeleteTime" Type="smallint" />
+          <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="RecordStatus" Type="smallint" />
+        </EntityType>
+        <EntityType Name="Banner">
+          <Key>
+            <PropertyRef Name="BannerId" />
+          </Key>
+          <Property Name="BannerId" Type="int" Nullable="false" />
+          <Property Name="BannerCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="BannerName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="CreationDate" Type="int" />
+          <Property Name="CreationTime" Type="smallint" />
+          <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifyDate" Type="int" />
+          <Property Name="ModifyTime" Type="smallint" />
+          <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeleteDate" Type="int" />
+          <Property Name="DeleteTime" Type="smallint" />
+          <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="RecordStatus" Type="smallint" />
+        </EntityType>
+        <EntityType Name="Blob">
+          <Key>
+            <PropertyRef Name="BlobId" />
+          </Key>
+          <Property Name="BlobId" Type="int" Nullable="false" />
+          <Property Name="SourceKey" Type="nvarchar" MaxLength="80" />
+          <Property Name="SourceRefType" Type="smallint" />
+          <Property Name="Filename" Type="nvarchar" MaxLength="254" />
+          <Property Name="FileExt" Type="nvarchar" MaxLength="10" />
+          <Property Name="BlobName" Type="nvarchar" MaxLength="80" />
+          <Property Name="BlobType" Type="nvarchar" MaxLength="80" />
+          <Property Name="Data" Type="varbinary(max)" />
+          <Property Name="CreationDate" Type="int" />
+          <Property Name="CreationTime" Type="smallint" />
+          <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifyDate" Type="int" />
+          <Property Name="ModifyTime" Type="smallint" />
+          <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeleteDate" Type="int" />
+          <Property Name="DeleteTime" Type="smallint" />
+          <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="RecordStatus" Type="smallint" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+          </Key>
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="CategoryCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="CategoryName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="CreationDate" Type="int" />
+          <Property Name="CreationTime" Type="smallint" />
+          <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifyDate" Type="int" />
+          <Property Name="ModifyTime" Type="smallint" />
+          <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeleteDate" Type="int" />
+          <Property Name="DeleteTime" Type="smallint" />
+          <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="RecordStatus" Type="smallint" />
+        </EntityType>
+        <EntityType Name="Content">
+          <Key>
+            <PropertyRef Name="ContentId" />
+          </Key>
+          <Property Name="ContentId" Type="int" Nullable="false" />
+          <Property Name="ContentCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ContentName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Content" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="CreationDate" Type="int" />
+          <Property Name="CreationTime" Type="smallint" />
+          <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifyDate" Type="int" />
+          <Property Name="ModifyTime" Type="smallint" />
+          <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeleteDate" Type="int" />
+          <Property Name="DeleteTime" Type="smallint" />
+          <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="RecordStatus" Type="smallint" />
+        </EntityType>
+        <EntityType Name="Location">
+          <Key>
+            <PropertyRef Name="LocationId" />
+          </Key>
+          <Property Name="LocationId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="LocationCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="LocationName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="LocationAddress" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="LocationContact" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="LocationCoordinate" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="CreationDate" Type="int" />
+          <Property Name="CreationTime" Type="smallint" />
+          <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifyDate" Type="int" />
+          <Property Name="ModifyTime" Type="smallint" />
+          <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeleteDate" Type="int" />
+          <Property Name="DeleteTime" Type="smallint" />
+          <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="RecordStatus" Type="smallint" />
+        </EntityType>
+        <EntityType Name="Newsletter">
+          <Key>
+            <PropertyRef Name="NewsletterId" />
+          </Key>
+          <Property Name="NewsletterId" Type="int" Nullable="false" />
+          <Property Name="NewsletterCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NewsletterName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="NewsletterContent" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="CreationDate" Type="int" />
+          <Property Name="CreationTime" Type="smallint" />
+          <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifyDate" Type="int" />
+          <Property Name="ModifyTime" Type="smallint" />
+          <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeleteDate" Type="int" />
+          <Property Name="DeleteTime" Type="smallint" />
+          <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="RecordStatus" Type="smallint" />
+        </EntityType>
+        <EntityType Name="Product_Header">
+          <Key>
+            <PropertyRef Name="ProductHeaderId" />
+          </Key>
+          <Property Name="ProductHeaderId" Type="int" Nullable="false" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="BannerId" Type="int" Nullable="false" />
+          <Property Name="StockStatusId" Type="int" Nullable="false" />
+          <Property Name="LocationId" Type="int" Nullable="false" />
+          <Property Name="ProductTypeId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="Sku" Type="nvarchar" MaxLength="255" />
+          <Property Name="Upc" Type="nvarchar" MaxLength="255" />
+          <Property Name="Model" Type="nvarchar" MaxLength="255" />
+          <Property Name="Class" Type="nvarchar" MaxLength="255" />
+          <Property Name="Engine" Type="nvarchar" MaxLength="255" />
+          <Property Name="CompressionRatio" Type="nvarchar" MaxLength="255" />
+          <Property Name="MaxTorque" Type="nvarchar" MaxLength="255" />
+          <Property Name="Transmision" Type="nvarchar" MaxLength="255" />
+          <Property Name="FrontTyre" Type="nvarchar" MaxLength="255" />
+          <Property Name="OverallLength" Type="nvarchar" MaxLength="255" />
+          <Property Name="OverallHeight" Type="nvarchar" MaxLength="255" />
+          <Property Name="SeatHeight" Type="nvarchar" MaxLength="255" />
+          <Property Name="FuelCapacity" Type="nvarchar" MaxLength="255" />
+          <Property Name="HorsePower" Type="nvarchar" MaxLength="255" />
+          <Property Name="YearUsed" Type="nvarchar" MaxLength="255" />
+          <Property Name="PlateNo" Type="nvarchar" MaxLength="255" />
+          <Property Name="Qty" Type="nvarchar" MaxLength="255" />
+          <Property Name="Price" Type="nvarchar" MaxLength="255" />
+          <Property Name="ModFeatured" Type="bit" Nullable="false" />
+          <Property Name="CreationDate" Type="int" />
+          <Property Name="CreationTime" Type="smallint" />
+          <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifyDate" Type="int" />
+          <Property Name="ModifyTime" Type="smallint" />
+          <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeleteDate" Type="int" />
+          <Property Name="DeleteTime" Type="smallint" />
+          <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="RecordStatus" Type="smallint" />
+        </EntityType>
+        <EntityType Name="Product_Image">
+          <Key>
+            <PropertyRef Name="ProductHeaderId" />
+            <PropertyRef Name="BlobId" />
+          </Key>
+          <Property Name="ProductHeaderId" Type="int" Nullable="false" />
+          <Property Name="BlobId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Product_Type">
+          <Key>
+            <PropertyRef Name="ProductTypeId" />
+          </Key>
+          <Property Name="ProductTypeId" Type="int" Nullable="false" />
+          <Property Name="ProductTypeCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ProductTypeName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="CreationDate" Type="int" />
+          <Property Name="CreationTime" Type="smallint" />
+          <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifyDate" Type="int" />
+          <Property Name="ModifyTime" Type="smallint" />
+          <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeleteDate" Type="int" />
+          <Property Name="DeleteTime" Type="smallint" />
+          <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="RecordStatus" Type="smallint" />
+        </EntityType>
+        <EntityType Name="Stock_Status">
+          <Key>
+            <PropertyRef Name="StockStatusId" />
+          </Key>
+          <Property Name="StockStatusId" Type="int" Nullable="false" />
+          <Property Name="StockStatusCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="StockStatusName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="CreationDate" Type="int" />
+          <Property Name="CreationTime" Type="smallint" />
+          <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifyDate" Type="int" />
+          <Property Name="ModifyTime" Type="smallint" />
+          <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeleteDate" Type="int" />
+          <Property Name="DeleteTime" Type="smallint" />
+          <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="RecordStatus" Type="smallint" />
+        </EntityType>
+        <EntityType Name="Subscribe">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="TargetUserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="TargetUserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="UserRoleId" Type="int" Nullable="false" />
+          <Property Name="BlobId" Type="int" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="IcNo" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ModSubscribe" Type="bit" Nullable="false" />
+          <Property Name="CreationDate" Type="int" />
+          <Property Name="CreationTime" Type="smallint" />
+          <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifyDate" Type="int" />
+          <Property Name="ModifyTime" Type="smallint" />
+          <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeleteDate" Type="int" />
+          <Property Name="DeleteTime" Type="smallint" />
+          <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="RecordStatus" Type="smallint" />
+        </EntityType>
+        <EntityType Name="User_Role">
+          <Key>
+            <PropertyRef Name="UserRoleId" />
+          </Key>
+          <Property Name="UserRoleId" Type="int" Nullable="false" />
+          <Property Name="UserRoleCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="UserRoleName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="CreationDate" Type="int" />
+          <Property Name="CreationTime" Type="smallint" />
+          <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifyDate" Type="int" />
+          <Property Name="ModifyTime" Type="smallint" />
+          <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeleteDate" Type="int" />
+          <Property Name="DeleteTime" Type="smallint" />
+          <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="RecordStatus" Type="smallint" />
+        </EntityType>
+        <EntityContainer Name="MOTOMYModelStoreContainer">
+          <EntitySet Name="Advertisement" EntityType="Self.Advertisement" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Banner" EntityType="Self.Banner" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Blob" EntityType="Self.Blob" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Content" EntityType="Self.Content" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Location" EntityType="Self.Location" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Newsletter" EntityType="Self.Newsletter" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product_Header" EntityType="Self.Product_Header" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product_Image" EntityType="Self.Product_Image" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product_Type" EntityType="Self.Product_Type" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Stock_Status" EntityType="Self.Stock_Status" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Subscribe" EntityType="Self.Subscribe" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User_Role" EntityType="Self.User_Role" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MOTOMYModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="Advertisement">
+          <Key>
+            <PropertyRef Name="AdvertisementId" />
+          </Key>
+          <Property Name="AdvertisementId" Type="Int32" Nullable="false" />
+          <Property Name="BlobId" Type="Int32" Nullable="false" />
+          <Property Name="AdvertisementCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AdvertisementName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Clicked" Type="Int32" />
+          <Property Name="CreationDate" Type="Int32" />
+          <Property Name="CreationTime" Type="Int16" />
+          <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModifyDate" Type="Int32" />
+          <Property Name="ModifyTime" Type="Int16" />
+          <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeleteDate" Type="Int32" />
+          <Property Name="DeleteTime" Type="Int16" />
+          <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int16" />
+        </EntityType>
+        <EntityType Name="Banner">
+          <Key>
+            <PropertyRef Name="BannerId" />
+          </Key>
+          <Property Name="BannerId" Type="Int32" Nullable="false" />
+          <Property Name="BannerCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BannerName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationDate" Type="Int32" />
+          <Property Name="CreationTime" Type="Int16" />
+          <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModifyDate" Type="Int32" />
+          <Property Name="ModifyTime" Type="Int16" />
+          <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeleteDate" Type="Int32" />
+          <Property Name="DeleteTime" Type="Int16" />
+          <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int16" />
+        </EntityType>
+        <EntityType Name="Blob">
+          <Key>
+            <PropertyRef Name="BlobId" />
+          </Key>
+          <Property Name="BlobId" Type="Int32" Nullable="false" />
+          <Property Name="SourceKey" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="SourceRefType" Type="Int16" />
+          <Property Name="Filename" Type="String" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Name="FileExt" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="BlobName" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="BlobType" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="Data" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="CreationDate" Type="Int32" />
+          <Property Name="CreationTime" Type="Int16" />
+          <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModifyDate" Type="Int32" />
+          <Property Name="ModifyTime" Type="Int16" />
+          <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeleteDate" Type="Int32" />
+          <Property Name="DeleteTime" Type="Int16" />
+          <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int16" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+          </Key>
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="CategoryCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CategoryName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationDate" Type="Int32" />
+          <Property Name="CreationTime" Type="Int16" />
+          <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModifyDate" Type="Int32" />
+          <Property Name="ModifyTime" Type="Int16" />
+          <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeleteDate" Type="Int32" />
+          <Property Name="DeleteTime" Type="Int16" />
+          <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int16" />
+        </EntityType>
+        <EntityType Name="Content">
+          <Key>
+            <PropertyRef Name="ContentId" />
+          </Key>
+          <Property Name="ContentId" Type="Int32" Nullable="false" />
+          <Property Name="ContentCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContentName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Content1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationDate" Type="Int32" />
+          <Property Name="CreationTime" Type="Int16" />
+          <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModifyDate" Type="Int32" />
+          <Property Name="ModifyTime" Type="Int16" />
+          <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeleteDate" Type="Int32" />
+          <Property Name="DeleteTime" Type="Int16" />
+          <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int16" />
+        </EntityType>
+        <EntityType Name="Location">
+          <Key>
+            <PropertyRef Name="LocationId" />
+          </Key>
+          <Property Name="LocationId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="LocationCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LocationName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LocationAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LocationContact" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LocationCoordinate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationDate" Type="Int32" />
+          <Property Name="CreationTime" Type="Int16" />
+          <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModifyDate" Type="Int32" />
+          <Property Name="ModifyTime" Type="Int16" />
+          <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeleteDate" Type="Int32" />
+          <Property Name="DeleteTime" Type="Int16" />
+          <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int16" />
+        </EntityType>
+        <EntityType Name="Newsletter">
+          <Key>
+            <PropertyRef Name="NewsletterId" />
+          </Key>
+          <Property Name="NewsletterId" Type="Int32" Nullable="false" />
+          <Property Name="NewsletterCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NewsletterName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NewsletterContent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationDate" Type="Int32" />
+          <Property Name="CreationTime" Type="Int16" />
+          <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModifyDate" Type="Int32" />
+          <Property Name="ModifyTime" Type="Int16" />
+          <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeleteDate" Type="Int32" />
+          <Property Name="DeleteTime" Type="Int16" />
+          <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int16" />
+        </EntityType>
+        <EntityType Name="Product_Header">
+          <Key>
+            <PropertyRef Name="ProductHeaderId" />
+          </Key>
+          <Property Name="ProductHeaderId" Type="Int32" Nullable="false" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="BannerId" Type="Int32" Nullable="false" />
+          <Property Name="StockStatusId" Type="Int32" Nullable="false" />
+          <Property Name="LocationId" Type="Int32" Nullable="false" />
+          <Property Name="ProductTypeId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="Sku" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Upc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Model" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Class" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Engine" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CompressionRatio" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MaxTorque" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Transmision" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FrontTyre" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OverallLength" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OverallHeight" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SeatHeight" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FuelCapacity" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HorsePower" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="YearUsed" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PlateNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Qty" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ModFeatured" Type="Boolean" Nullable="false" />
+          <Property Name="CreationDate" Type="Int32" />
+          <Property Name="CreationTime" Type="Int16" />
+          <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModifyDate" Type="Int32" />
+          <Property Name="ModifyTime" Type="Int16" />
+          <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeleteDate" Type="Int32" />
+          <Property Name="DeleteTime" Type="Int16" />
+          <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int16" />
+        </EntityType>
+        <EntityType Name="Product_Image">
+          <Key>
+            <PropertyRef Name="ProductHeaderId" />
+            <PropertyRef Name="BlobId" />
+          </Key>
+          <Property Name="ProductHeaderId" Type="Int32" Nullable="false" />
+          <Property Name="BlobId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Product_Type">
+          <Key>
+            <PropertyRef Name="ProductTypeId" />
+          </Key>
+          <Property Name="ProductTypeId" Type="Int32" Nullable="false" />
+          <Property Name="ProductTypeCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProductTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationDate" Type="Int32" />
+          <Property Name="CreationTime" Type="Int16" />
+          <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModifyDate" Type="Int32" />
+          <Property Name="ModifyTime" Type="Int16" />
+          <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeleteDate" Type="Int32" />
+          <Property Name="DeleteTime" Type="Int16" />
+          <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int16" />
+        </EntityType>
+        <EntityType Name="Stock_Status">
+          <Key>
+            <PropertyRef Name="StockStatusId" />
+          </Key>
+          <Property Name="StockStatusId" Type="Int32" Nullable="false" />
+          <Property Name="StockStatusCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StockStatusName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationDate" Type="Int32" />
+          <Property Name="CreationTime" Type="Int16" />
+          <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModifyDate" Type="Int32" />
+          <Property Name="ModifyTime" Type="Int16" />
+          <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeleteDate" Type="Int32" />
+          <Property Name="DeleteTime" Type="Int16" />
+          <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int16" />
+        </EntityType>
+        <EntityType Name="Subscribe">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="TargetUserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="TargetUserId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="UserRoleId" Type="Int32" Nullable="false" />
+          <Property Name="BlobId" Type="Int32" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IcNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ModSubscribe" Type="Boolean" Nullable="false" />
+          <Property Name="CreationDate" Type="Int32" />
+          <Property Name="CreationTime" Type="Int16" />
+          <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModifyDate" Type="Int32" />
+          <Property Name="ModifyTime" Type="Int16" />
+          <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeleteDate" Type="Int32" />
+          <Property Name="DeleteTime" Type="Int16" />
+          <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int16" />
+        </EntityType>
+        <EntityType Name="User_Role">
+          <Key>
+            <PropertyRef Name="UserRoleId" />
+          </Key>
+          <Property Name="UserRoleId" Type="Int32" Nullable="false" />
+          <Property Name="UserRoleCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserRoleName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreationDate" Type="Int32" />
+          <Property Name="CreationTime" Type="Int16" />
+          <Property Name="CreationUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModifyDate" Type="Int32" />
+          <Property Name="ModifyTime" Type="Int16" />
+          <Property Name="ModifyUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeleteDate" Type="Int32" />
+          <Property Name="DeleteTime" Type="Int16" />
+          <Property Name="DeleteUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RecordStatus" Type="Int16" />
+        </EntityType>
+        <EntityContainer Name="MOTOMYEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Advertisements" EntityType="Self.Advertisement" />
+          <EntitySet Name="Banners" EntityType="Self.Banner" />
+          <EntitySet Name="Blobs" EntityType="Self.Blob" />
+          <EntitySet Name="Categories" EntityType="Self.Category" />
+          <EntitySet Name="Contents" EntityType="Self.Content" />
+          <EntitySet Name="Locations" EntityType="Self.Location" />
+          <EntitySet Name="Newsletters" EntityType="Self.Newsletter" />
+          <EntitySet Name="Product_Header" EntityType="Self.Product_Header" />
+          <EntitySet Name="Product_Image" EntityType="Self.Product_Image" />
+          <EntitySet Name="Product_Type" EntityType="Self.Product_Type" />
+          <EntitySet Name="Stock_Status" EntityType="Self.Stock_Status" />
+          <EntitySet Name="Subscribes" EntityType="Self.Subscribe" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="User_Role" EntityType="Self.User_Role" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MOTOMYModelStoreContainer" CdmEntityContainer="MOTOMYEntities">
+          <EntitySetMapping Name="Advertisements">
+            <EntityTypeMapping TypeName="MOTOMYModel.Advertisement">
+              <MappingFragment StoreEntitySet="Advertisement">
+                <ScalarProperty Name="AdvertisementId" ColumnName="AdvertisementId" />
+                <ScalarProperty Name="BlobId" ColumnName="BlobId" />
+                <ScalarProperty Name="AdvertisementCode" ColumnName="AdvertisementCode" />
+                <ScalarProperty Name="AdvertisementName" ColumnName="AdvertisementName" />
+                <ScalarProperty Name="Clicked" ColumnName="Clicked" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+                <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Banners">
+            <EntityTypeMapping TypeName="MOTOMYModel.Banner">
+              <MappingFragment StoreEntitySet="Banner">
+                <ScalarProperty Name="BannerId" ColumnName="BannerId" />
+                <ScalarProperty Name="BannerCode" ColumnName="BannerCode" />
+                <ScalarProperty Name="BannerName" ColumnName="BannerName" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+                <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Blobs">
+            <EntityTypeMapping TypeName="MOTOMYModel.Blob">
+              <MappingFragment StoreEntitySet="Blob">
+                <ScalarProperty Name="BlobId" ColumnName="BlobId" />
+                <ScalarProperty Name="SourceKey" ColumnName="SourceKey" />
+                <ScalarProperty Name="SourceRefType" ColumnName="SourceRefType" />
+                <ScalarProperty Name="Filename" ColumnName="Filename" />
+                <ScalarProperty Name="FileExt" ColumnName="FileExt" />
+                <ScalarProperty Name="BlobName" ColumnName="BlobName" />
+                <ScalarProperty Name="BlobType" ColumnName="BlobType" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+                <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="MOTOMYModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="CategoryCode" ColumnName="CategoryCode" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+                <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contents">
+            <EntityTypeMapping TypeName="MOTOMYModel.Content">
+              <MappingFragment StoreEntitySet="Content">
+                <ScalarProperty Name="ContentId" ColumnName="ContentId" />
+                <ScalarProperty Name="ContentCode" ColumnName="ContentCode" />
+                <ScalarProperty Name="ContentName" ColumnName="ContentName" />
+                <ScalarProperty Name="Content1" ColumnName="Content" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+                <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Locations">
+            <EntityTypeMapping TypeName="MOTOMYModel.Location">
+              <MappingFragment StoreEntitySet="Location">
+                <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+                <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+                <ScalarProperty Name="LocationAddress" ColumnName="LocationAddress" />
+                <ScalarProperty Name="LocationContact" ColumnName="LocationContact" />
+                <ScalarProperty Name="LocationCoordinate" ColumnName="LocationCoordinate" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+                <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Newsletters">
+            <EntityTypeMapping TypeName="MOTOMYModel.Newsletter">
+              <MappingFragment StoreEntitySet="Newsletter">
+                <ScalarProperty Name="NewsletterId" ColumnName="NewsletterId" />
+                <ScalarProperty Name="NewsletterCode" ColumnName="NewsletterCode" />
+                <ScalarProperty Name="NewsletterName" ColumnName="NewsletterName" />
+                <ScalarProperty Name="NewsletterContent" ColumnName="NewsletterContent" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+                <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Product_Header">
+            <EntityTypeMapping TypeName="MOTOMYModel.Product_Header">
+              <MappingFragment StoreEntitySet="Product_Header">
+                <ScalarProperty Name="ProductHeaderId" ColumnName="ProductHeaderId" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="BannerId" ColumnName="BannerId" />
+                <ScalarProperty Name="StockStatusId" ColumnName="StockStatusId" />
+                <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+                <ScalarProperty Name="ProductTypeId" ColumnName="ProductTypeId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Sku" ColumnName="Sku" />
+                <ScalarProperty Name="Upc" ColumnName="Upc" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Class" ColumnName="Class" />
+                <ScalarProperty Name="Engine" ColumnName="Engine" />
+                <ScalarProperty Name="CompressionRatio" ColumnName="CompressionRatio" />
+                <ScalarProperty Name="MaxTorque" ColumnName="MaxTorque" />
+                <ScalarProperty Name="Transmision" ColumnName="Transmision" />
+                <ScalarProperty Name="FrontTyre" ColumnName="FrontTyre" />
+                <ScalarProperty Name="OverallLength" ColumnName="OverallLength" />
+                <ScalarProperty Name="OverallHeight" ColumnName="OverallHeight" />
+                <ScalarProperty Name="SeatHeight" ColumnName="SeatHeight" />
+                <ScalarProperty Name="FuelCapacity" ColumnName="FuelCapacity" />
+                <ScalarProperty Name="HorsePower" ColumnName="HorsePower" />
+                <ScalarProperty Name="YearUsed" ColumnName="YearUsed" />
+                <ScalarProperty Name="PlateNo" ColumnName="PlateNo" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="ModFeatured" ColumnName="ModFeatured" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+                <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Product_Image">
+            <EntityTypeMapping TypeName="MOTOMYModel.Product_Image">
+              <MappingFragment StoreEntitySet="Product_Image">
+                <ScalarProperty Name="ProductHeaderId" ColumnName="ProductHeaderId" />
+                <ScalarProperty Name="BlobId" ColumnName="BlobId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Product_Type">
+            <EntityTypeMapping TypeName="MOTOMYModel.Product_Type">
+              <MappingFragment StoreEntitySet="Product_Type">
+                <ScalarProperty Name="ProductTypeId" ColumnName="ProductTypeId" />
+                <ScalarProperty Name="ProductTypeCode" ColumnName="ProductTypeCode" />
+                <ScalarProperty Name="ProductTypeName" ColumnName="ProductTypeName" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+                <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Stock_Status">
+            <EntityTypeMapping TypeName="MOTOMYModel.Stock_Status">
+              <MappingFragment StoreEntitySet="Stock_Status">
+                <ScalarProperty Name="StockStatusId" ColumnName="StockStatusId" />
+                <ScalarProperty Name="StockStatusCode" ColumnName="StockStatusCode" />
+                <ScalarProperty Name="StockStatusName" ColumnName="StockStatusName" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+                <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Subscribes">
+            <EntityTypeMapping TypeName="MOTOMYModel.Subscribe">
+              <MappingFragment StoreEntitySet="Subscribe">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="TargetUserId" ColumnName="TargetUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="MOTOMYModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserRoleId" ColumnName="UserRoleId" />
+                <ScalarProperty Name="BlobId" ColumnName="BlobId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="IcNo" ColumnName="IcNo" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="ModSubscribe" ColumnName="ModSubscribe" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+                <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User_Role">
+            <EntityTypeMapping TypeName="MOTOMYModel.User_Role">
+              <MappingFragment StoreEntitySet="User_Role">
+                <ScalarProperty Name="UserRoleId" ColumnName="UserRoleId" />
+                <ScalarProperty Name="UserRoleCode" ColumnName="UserRoleCode" />
+                <ScalarProperty Name="UserRoleName" ColumnName="UserRoleName" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+                <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+                <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+                <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+                <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

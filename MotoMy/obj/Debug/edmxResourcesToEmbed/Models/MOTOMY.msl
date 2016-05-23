@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MOTOMYModelStoreContainer" CdmEntityContainer="MOTOMYEntities">
+    <EntitySetMapping Name="Advertisements">
+      <EntityTypeMapping TypeName="MOTOMYModel.Advertisement">
+        <MappingFragment StoreEntitySet="Advertisement">
+          <ScalarProperty Name="AdvertisementId" ColumnName="AdvertisementId" />
+          <ScalarProperty Name="BlobId" ColumnName="BlobId" />
+          <ScalarProperty Name="AdvertisementCode" ColumnName="AdvertisementCode" />
+          <ScalarProperty Name="AdvertisementName" ColumnName="AdvertisementName" />
+          <ScalarProperty Name="Clicked" ColumnName="Clicked" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+          <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+          <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Banners">
+      <EntityTypeMapping TypeName="MOTOMYModel.Banner">
+        <MappingFragment StoreEntitySet="Banner">
+          <ScalarProperty Name="BannerId" ColumnName="BannerId" />
+          <ScalarProperty Name="BannerCode" ColumnName="BannerCode" />
+          <ScalarProperty Name="BannerName" ColumnName="BannerName" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+          <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+          <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Blobs">
+      <EntityTypeMapping TypeName="MOTOMYModel.Blob">
+        <MappingFragment StoreEntitySet="Blob">
+          <ScalarProperty Name="BlobId" ColumnName="BlobId" />
+          <ScalarProperty Name="SourceKey" ColumnName="SourceKey" />
+          <ScalarProperty Name="SourceRefType" ColumnName="SourceRefType" />
+          <ScalarProperty Name="Filename" ColumnName="Filename" />
+          <ScalarProperty Name="FileExt" ColumnName="FileExt" />
+          <ScalarProperty Name="BlobName" ColumnName="BlobName" />
+          <ScalarProperty Name="BlobType" ColumnName="BlobType" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+          <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+          <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="MOTOMYModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="CategoryCode" ColumnName="CategoryCode" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+          <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+          <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contents">
+      <EntityTypeMapping TypeName="MOTOMYModel.Content">
+        <MappingFragment StoreEntitySet="Content">
+          <ScalarProperty Name="ContentId" ColumnName="ContentId" />
+          <ScalarProperty Name="ContentCode" ColumnName="ContentCode" />
+          <ScalarProperty Name="ContentName" ColumnName="ContentName" />
+          <ScalarProperty Name="Content1" ColumnName="Content" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+          <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+          <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="MOTOMYModel.Location">
+        <MappingFragment StoreEntitySet="Location">
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="LocationAddress" ColumnName="LocationAddress" />
+          <ScalarProperty Name="LocationContact" ColumnName="LocationContact" />
+          <ScalarProperty Name="LocationCoordinate" ColumnName="LocationCoordinate" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+          <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+          <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Newsletters">
+      <EntityTypeMapping TypeName="MOTOMYModel.Newsletter">
+        <MappingFragment StoreEntitySet="Newsletter">
+          <ScalarProperty Name="NewsletterId" ColumnName="NewsletterId" />
+          <ScalarProperty Name="NewsletterCode" ColumnName="NewsletterCode" />
+          <ScalarProperty Name="NewsletterName" ColumnName="NewsletterName" />
+          <ScalarProperty Name="NewsletterContent" ColumnName="NewsletterContent" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+          <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+          <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product_Header">
+      <EntityTypeMapping TypeName="MOTOMYModel.Product_Header">
+        <MappingFragment StoreEntitySet="Product_Header">
+          <ScalarProperty Name="ProductHeaderId" ColumnName="ProductHeaderId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="BannerId" ColumnName="BannerId" />
+          <ScalarProperty Name="StockStatusId" ColumnName="StockStatusId" />
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="ProductTypeId" ColumnName="ProductTypeId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="Upc" ColumnName="Upc" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="Engine" ColumnName="Engine" />
+          <ScalarProperty Name="CompressionRatio" ColumnName="CompressionRatio" />
+          <ScalarProperty Name="MaxTorque" ColumnName="MaxTorque" />
+          <ScalarProperty Name="Transmision" ColumnName="Transmision" />
+          <ScalarProperty Name="FrontTyre" ColumnName="FrontTyre" />
+          <ScalarProperty Name="OverallLength" ColumnName="OverallLength" />
+          <ScalarProperty Name="OverallHeight" ColumnName="OverallHeight" />
+          <ScalarProperty Name="SeatHeight" ColumnName="SeatHeight" />
+          <ScalarProperty Name="FuelCapacity" ColumnName="FuelCapacity" />
+          <ScalarProperty Name="HorsePower" ColumnName="HorsePower" />
+          <ScalarProperty Name="YearUsed" ColumnName="YearUsed" />
+          <ScalarProperty Name="PlateNo" ColumnName="PlateNo" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ModFeatured" ColumnName="ModFeatured" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+          <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+          <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product_Image">
+      <EntityTypeMapping TypeName="MOTOMYModel.Product_Image">
+        <MappingFragment StoreEntitySet="Product_Image">
+          <ScalarProperty Name="ProductHeaderId" ColumnName="ProductHeaderId" />
+          <ScalarProperty Name="BlobId" ColumnName="BlobId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product_Type">
+      <EntityTypeMapping TypeName="MOTOMYModel.Product_Type">
+        <MappingFragment StoreEntitySet="Product_Type">
+          <ScalarProperty Name="ProductTypeId" ColumnName="ProductTypeId" />
+          <ScalarProperty Name="ProductTypeCode" ColumnName="ProductTypeCode" />
+          <ScalarProperty Name="ProductTypeName" ColumnName="ProductTypeName" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+          <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+          <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stock_Status">
+      <EntityTypeMapping TypeName="MOTOMYModel.Stock_Status">
+        <MappingFragment StoreEntitySet="Stock_Status">
+          <ScalarProperty Name="StockStatusId" ColumnName="StockStatusId" />
+          <ScalarProperty Name="StockStatusCode" ColumnName="StockStatusCode" />
+          <ScalarProperty Name="StockStatusName" ColumnName="StockStatusName" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+          <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+          <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subscribes">
+      <EntityTypeMapping TypeName="MOTOMYModel.Subscribe">
+        <MappingFragment StoreEntitySet="Subscribe">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="TargetUserId" ColumnName="TargetUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="MOTOMYModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserRoleId" ColumnName="UserRoleId" />
+          <ScalarProperty Name="BlobId" ColumnName="BlobId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IcNo" ColumnName="IcNo" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ModSubscribe" ColumnName="ModSubscribe" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+          <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+          <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Role">
+      <EntityTypeMapping TypeName="MOTOMYModel.User_Role">
+        <MappingFragment StoreEntitySet="User_Role">
+          <ScalarProperty Name="UserRoleId" ColumnName="UserRoleId" />
+          <ScalarProperty Name="UserRoleCode" ColumnName="UserRoleCode" />
+          <ScalarProperty Name="UserRoleName" ColumnName="UserRoleName" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="CreationUser" ColumnName="CreationUser" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+          <ScalarProperty Name="ModifyUser" ColumnName="ModifyUser" />
+          <ScalarProperty Name="DeleteDate" ColumnName="DeleteDate" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+          <ScalarProperty Name="RecordStatus" ColumnName="RecordStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

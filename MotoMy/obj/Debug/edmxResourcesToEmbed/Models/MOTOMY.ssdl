@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MOTOMYModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="Advertisement">
+    <Key>
+      <PropertyRef Name="AdvertisementId" />
+    </Key>
+    <Property Name="AdvertisementId" Type="int" Nullable="false" />
+    <Property Name="BlobId" Type="int" Nullable="false" />
+    <Property Name="AdvertisementCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="AdvertisementName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Clicked" Type="int" />
+    <Property Name="CreationDate" Type="int" />
+    <Property Name="CreationTime" Type="smallint" />
+    <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifyDate" Type="int" />
+    <Property Name="ModifyTime" Type="smallint" />
+    <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeleteDate" Type="int" />
+    <Property Name="DeleteTime" Type="smallint" />
+    <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecordStatus" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Banner">
+    <Key>
+      <PropertyRef Name="BannerId" />
+    </Key>
+    <Property Name="BannerId" Type="int" Nullable="false" />
+    <Property Name="BannerCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="BannerName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="CreationDate" Type="int" />
+    <Property Name="CreationTime" Type="smallint" />
+    <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifyDate" Type="int" />
+    <Property Name="ModifyTime" Type="smallint" />
+    <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeleteDate" Type="int" />
+    <Property Name="DeleteTime" Type="smallint" />
+    <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecordStatus" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Blob">
+    <Key>
+      <PropertyRef Name="BlobId" />
+    </Key>
+    <Property Name="BlobId" Type="int" Nullable="false" />
+    <Property Name="SourceKey" Type="nvarchar" MaxLength="80" />
+    <Property Name="SourceRefType" Type="smallint" />
+    <Property Name="Filename" Type="nvarchar" MaxLength="254" />
+    <Property Name="FileExt" Type="nvarchar" MaxLength="10" />
+    <Property Name="BlobName" Type="nvarchar" MaxLength="80" />
+    <Property Name="BlobType" Type="nvarchar" MaxLength="80" />
+    <Property Name="Data" Type="varbinary(max)" />
+    <Property Name="CreationDate" Type="int" />
+    <Property Name="CreationTime" Type="smallint" />
+    <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifyDate" Type="int" />
+    <Property Name="ModifyTime" Type="smallint" />
+    <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeleteDate" Type="int" />
+    <Property Name="DeleteTime" Type="smallint" />
+    <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecordStatus" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="CategoryCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="CreationDate" Type="int" />
+    <Property Name="CreationTime" Type="smallint" />
+    <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifyDate" Type="int" />
+    <Property Name="ModifyTime" Type="smallint" />
+    <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeleteDate" Type="int" />
+    <Property Name="DeleteTime" Type="smallint" />
+    <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecordStatus" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Content">
+    <Key>
+      <PropertyRef Name="ContentId" />
+    </Key>
+    <Property Name="ContentId" Type="int" Nullable="false" />
+    <Property Name="ContentCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ContentName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Content" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="CreationDate" Type="int" />
+    <Property Name="CreationTime" Type="smallint" />
+    <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifyDate" Type="int" />
+    <Property Name="ModifyTime" Type="smallint" />
+    <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeleteDate" Type="int" />
+    <Property Name="DeleteTime" Type="smallint" />
+    <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecordStatus" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="LocationId" />
+    </Key>
+    <Property Name="LocationId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="LocationCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="LocationName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="LocationAddress" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="LocationContact" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="LocationCoordinate" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="CreationDate" Type="int" />
+    <Property Name="CreationTime" Type="smallint" />
+    <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifyDate" Type="int" />
+    <Property Name="ModifyTime" Type="smallint" />
+    <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeleteDate" Type="int" />
+    <Property Name="DeleteTime" Type="smallint" />
+    <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecordStatus" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Newsletter">
+    <Key>
+      <PropertyRef Name="NewsletterId" />
+    </Key>
+    <Property Name="NewsletterId" Type="int" Nullable="false" />
+    <Property Name="NewsletterCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="NewsletterName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="NewsletterContent" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="CreationDate" Type="int" />
+    <Property Name="CreationTime" Type="smallint" />
+    <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifyDate" Type="int" />
+    <Property Name="ModifyTime" Type="smallint" />
+    <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeleteDate" Type="int" />
+    <Property Name="DeleteTime" Type="smallint" />
+    <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecordStatus" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Product_Header">
+    <Key>
+      <PropertyRef Name="ProductHeaderId" />
+    </Key>
+    <Property Name="ProductHeaderId" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="BannerId" Type="int" Nullable="false" />
+    <Property Name="StockStatusId" Type="int" Nullable="false" />
+    <Property Name="LocationId" Type="int" Nullable="false" />
+    <Property Name="ProductTypeId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Sku" Type="nvarchar" MaxLength="255" />
+    <Property Name="Upc" Type="nvarchar" MaxLength="255" />
+    <Property Name="Model" Type="nvarchar" MaxLength="255" />
+    <Property Name="Class" Type="nvarchar" MaxLength="255" />
+    <Property Name="Engine" Type="nvarchar" MaxLength="255" />
+    <Property Name="CompressionRatio" Type="nvarchar" MaxLength="255" />
+    <Property Name="MaxTorque" Type="nvarchar" MaxLength="255" />
+    <Property Name="Transmision" Type="nvarchar" MaxLength="255" />
+    <Property Name="FrontTyre" Type="nvarchar" MaxLength="255" />
+    <Property Name="OverallLength" Type="nvarchar" MaxLength="255" />
+    <Property Name="OverallHeight" Type="nvarchar" MaxLength="255" />
+    <Property Name="SeatHeight" Type="nvarchar" MaxLength="255" />
+    <Property Name="FuelCapacity" Type="nvarchar" MaxLength="255" />
+    <Property Name="HorsePower" Type="nvarchar" MaxLength="255" />
+    <Property Name="YearUsed" Type="nvarchar" MaxLength="255" />
+    <Property Name="PlateNo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Qty" Type="nvarchar" MaxLength="255" />
+    <Property Name="Price" Type="nvarchar" MaxLength="255" />
+    <Property Name="ModFeatured" Type="bit" Nullable="false" />
+    <Property Name="CreationDate" Type="int" />
+    <Property Name="CreationTime" Type="smallint" />
+    <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifyDate" Type="int" />
+    <Property Name="ModifyTime" Type="smallint" />
+    <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeleteDate" Type="int" />
+    <Property Name="DeleteTime" Type="smallint" />
+    <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecordStatus" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Product_Image">
+    <Key>
+      <PropertyRef Name="ProductHeaderId" />
+      <PropertyRef Name="BlobId" />
+    </Key>
+    <Property Name="ProductHeaderId" Type="int" Nullable="false" />
+    <Property Name="BlobId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product_Type">
+    <Key>
+      <PropertyRef Name="ProductTypeId" />
+    </Key>
+    <Property Name="ProductTypeId" Type="int" Nullable="false" />
+    <Property Name="ProductTypeCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ProductTypeName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="CreationDate" Type="int" />
+    <Property Name="CreationTime" Type="smallint" />
+    <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifyDate" Type="int" />
+    <Property Name="ModifyTime" Type="smallint" />
+    <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeleteDate" Type="int" />
+    <Property Name="DeleteTime" Type="smallint" />
+    <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecordStatus" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Stock_Status">
+    <Key>
+      <PropertyRef Name="StockStatusId" />
+    </Key>
+    <Property Name="StockStatusId" Type="int" Nullable="false" />
+    <Property Name="StockStatusCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="StockStatusName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="CreationDate" Type="int" />
+    <Property Name="CreationTime" Type="smallint" />
+    <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifyDate" Type="int" />
+    <Property Name="ModifyTime" Type="smallint" />
+    <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeleteDate" Type="int" />
+    <Property Name="DeleteTime" Type="smallint" />
+    <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecordStatus" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Subscribe">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="TargetUserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="TargetUserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="UserRoleId" Type="int" Nullable="false" />
+    <Property Name="BlobId" Type="int" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="IcNo" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ModSubscribe" Type="bit" Nullable="false" />
+    <Property Name="CreationDate" Type="int" />
+    <Property Name="CreationTime" Type="smallint" />
+    <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifyDate" Type="int" />
+    <Property Name="ModifyTime" Type="smallint" />
+    <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeleteDate" Type="int" />
+    <Property Name="DeleteTime" Type="smallint" />
+    <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecordStatus" Type="smallint" />
+  </EntityType>
+  <EntityType Name="User_Role">
+    <Key>
+      <PropertyRef Name="UserRoleId" />
+    </Key>
+    <Property Name="UserRoleId" Type="int" Nullable="false" />
+    <Property Name="UserRoleCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="UserRoleName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="CreationDate" Type="int" />
+    <Property Name="CreationTime" Type="smallint" />
+    <Property Name="CreationUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifyDate" Type="int" />
+    <Property Name="ModifyTime" Type="smallint" />
+    <Property Name="ModifyUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeleteDate" Type="int" />
+    <Property Name="DeleteTime" Type="smallint" />
+    <Property Name="DeleteUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecordStatus" Type="smallint" />
+  </EntityType>
+  <EntityContainer Name="MOTOMYModelStoreContainer">
+    <EntitySet Name="Advertisement" EntityType="Self.Advertisement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Banner" EntityType="Self.Banner" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Blob" EntityType="Self.Blob" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Content" EntityType="Self.Content" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Location" EntityType="Self.Location" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Newsletter" EntityType="Self.Newsletter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product_Header" EntityType="Self.Product_Header" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product_Image" EntityType="Self.Product_Image" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product_Type" EntityType="Self.Product_Type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stock_Status" EntityType="Self.Stock_Status" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Subscribe" EntityType="Self.Subscribe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_Role" EntityType="Self.User_Role" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
