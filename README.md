@@ -1,7 +1,7 @@
 # MOTOMY
-Project start on 2015-05-20
+###Project start on 2015-05-20
 Let's the project begin....
 
-The team:
-1. Teddy -- Team Leader
-2. Eric -- Bullshiter
+###Our team:
+1. Teddy
+2. Eric
