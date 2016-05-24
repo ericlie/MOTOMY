@@ -19,9 +19,7 @@ namespace MotoMy.Controllers
             db = new MOTOMYEntities();
             base.Initialize(requestContext);
         }
-
     }
-
     public class AuthorizedController : GeneralController
     {
        

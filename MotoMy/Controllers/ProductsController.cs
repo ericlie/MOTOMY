@@ -6,20 +6,30 @@ using System.Web.Mvc;
 
 namespace MotoMy.Controllers
 {
-    public class MembersController : Controller
+    public class ProductsController : Controller
     {
         //
-        // GET: /Members/
+        // GET: /Products/
 
         public ActionResult Index()
         {
             return View();
         }
-
         public ActionResult Register()
         {
             return View();
         }
-        
+        public ActionResult Summary()
+        {
+            return View();
+        }
+        public ActionResult Category()
+        {
+            return View();
+        }
+        public ActionResult Sales()
+        {
+            return View();
+        }
     }
 }

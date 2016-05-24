@@ -145,6 +145,7 @@
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\GeneralController.cs" />
     <Compile Include="Controllers\MembersController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1732,6 +1733,10 @@
     <Content Include="Views\Account\nabe.cshtml" />
     <Content Include="Views\Members\Register.cshtml" />
     <Content Include="Views\Members\Index.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Products\Register.cshtml" />
+    <Content Include="Views\Products\Summary.cshtml" />
+    <Content Include="Views\Products\Sales.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
